@@ -23,9 +23,9 @@ function displayMatches() {
     <li>
       <span class="name">${place.city}, ${place.state}</span>
       <span class="population">${place.population}</span>
-    <li>
+    </li>
     `;
-  });
+  }).join('');
   suggestions.innerHTML = html;
 }
 
