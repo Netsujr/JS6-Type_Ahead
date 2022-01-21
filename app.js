@@ -11,7 +11,11 @@ fetch(endpoint)
 function findMatches(wordToMatch, cities) {
   return cities.filter(place => {
     //does it match?
-    return place.city.match(/wordToMatch/i);
+    const regex = new RegExp(wordToMatch, 'gi');
+    return place.city.match(regex) || place.state.match(regex);
   });
 }
+
+
+
 // console.log(data);
