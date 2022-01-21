@@ -17,13 +17,15 @@ function findMatches(wordToMatch, cities) {
 }
 
 function displayMatches() {
-  console.log(this.value);
+  const matchedArray = findMatches(this.value, cities);
+  console.log(matchedArray);
 }
 
 const searchInput = document.querySelector('.search');
 const suggestions = document.querySelector('.suggestions');
 
 searchInput.addEventListener('change', displayMatches);
+searchInput.addEventListener('keyup', displayMatches);
 
 
 // console.log(data);
