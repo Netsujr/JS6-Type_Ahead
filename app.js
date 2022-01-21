@@ -7,4 +7,11 @@ fetch(endpoint)
       .then(data => cities.push(...data)); //spread the array (decustruct each element and push it into cities array)
 
 
+
+function findMatches(wordToMatch, cities) {
+  return cities.filter(place => {
+    //does it match?
+    return place.city.match(/wordToMatch/i);
+  });
+}
 // console.log(data);
