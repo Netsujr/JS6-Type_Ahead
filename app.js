@@ -18,7 +18,7 @@ function findMatches(wordToMatch, cities) {
 
 function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-}
+}; // gladly taken from stackoverflow :)
 
 function displayMatches() {
   const matchedArray = findMatches(this.value, cities);
