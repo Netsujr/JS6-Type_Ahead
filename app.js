@@ -3,7 +3,7 @@ const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb
 const cities = [];
 
 fetch(endpoint)
-      .then(blob => blob.json())
+      .then(event => event.json())
       .then(data => cities.push(...data)); //spread the array (decustruct each element and push it into cities array)
 
 
